@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#7AC2DC">
+
+
+    <TextView
+        android:id="@+id/Welcome"
+        android:layout_width="364dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Welcome Back"
+        android:textSize="24dp"
+        android:textColor="#252525"
+        android:layout_marginTop="180dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/BelowWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="sign in to access your account"
+        android:textSize="14sp"
+        android:textColor="#252525"
+
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Welcome" />
+
+    <ImageView
+        android:layout_width="322dp"
+        android:layout_height="256dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="42dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/undraw_adventure_map_hnin_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/enterEmail"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="#20C4C4C4"
+        android:hint="Enter you email"
+        android:inputType="textEmailAddress"
+        android:gravity="center_vertical"
+        android:paddingLeft="22dp"
+        android:textSize="17dp"
+        android:layout_marginHorizontal="43dp"
+        android:layout_marginTop="325dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/enterPassword"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="#20C4C4C4"
+        android:hint="Enter you password"
+        android:inputType="textPassword"
+        android:gravity="center_vertical"
+        android:paddingLeft="22dp"
+        android:textSize="17dp"
+        android:layout_marginHorizontal="43dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterEmail"/>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        app:layout_constraintStart_toStartOf="@+id/enterPassword"
+        app:layout_constraintTop_toBottomOf="@+id/enterPassword"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/rememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="11dp"
+        android:text="Remember Me"
+        android:textSize="9dp"
+        android:textColor="#252525"
+        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        app:layout_constraintTop_toTopOf="@+id/checkBox"
+        android:paddingLeft="5dp"/>
+
+    <TextView
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        android:text="Forget Password ?"
+        android:textSize="9dp"
+        android:textColor="#6C63FF"
+        app:layout_constraintEnd_toEndOf="@+id/enterPassword"
+        app:layout_constraintTop_toTopOf="@+id/checkBox"
+        android:paddingRight="5dp"/>
+
+    <TextView
+        android:id="@+id/newMember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Member?"
+        android:textSize="13dp"
+        android:textColor="#252525"
+        android:layout_marginBottom="58dp"
+        android:layout_marginLeft="103dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/signUpTextView"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:text="Register now"
+        android:textColor="#6C63FF"
+        android:textSize="13sp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toEndOf="@+id/newMember"
+        app:layout_constraintTop_toTopOf="@+id/newMember"/>
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="NEXT"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:backgroundTint="#6C63FF"
+        android:gravity="center"
+        android:layout_marginBottom="39dp"
+        app:layout_constraintBottom_toTopOf="@+id/newMember"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
