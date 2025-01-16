@@ -50,6 +50,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        findViewById<TextView>(R.id.forgetPassword).setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.main, ForgotPasswordFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
     }
 
     private fun validateLogin(): Boolean {

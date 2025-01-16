@@ -169,6 +169,7 @@
         app:layout_constraintTop_toTopOf="@+id/newMember"/>
 
     <Button
+        android:id="@+id/signUpButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:text="NEXT"
