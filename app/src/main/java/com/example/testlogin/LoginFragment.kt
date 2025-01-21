@@ -48,7 +48,8 @@ class LoginFragment : Fragment() {
             loginButton.setOnClickListener {
                 if (validateLogin()) {
                     Toast.makeText(context, "Login Successful!", Toast.LENGTH_SHORT).show()
-                    // Add post-login navigation here
+                    // Navigate to RecipeListFragment after successful login
+                    (activity as? MainActivity)?.navigateToFragment(RecipeListFragment.newInstance())
                 } else {
                     Toast.makeText(context, "Invalid Email or Password", Toast.LENGTH_SHORT).show()
                 }
