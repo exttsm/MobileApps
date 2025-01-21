@@ -1,10 +1,20 @@
 package com.example.testlogin
 
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+
 class CredentialsManager {
     private val credentials = mutableMapOf<String, UserData>()
+    private val _loginState = MutableStateFlow<Boolean>(false)
+    val loginState: StateFlow<Boolean> = _loginState.asStateFlow()
 
     init {
-        // Add test credentials
         credentials["test@te.st"] = UserData(
             fullName = "Test User",
             email = "test@te.st",
@@ -21,6 +31,14 @@ class CredentialsManager {
     }
 
     fun validateCredentials(email: String, password: String): Boolean {
-        return credentials[email]?.password == password
+        val isValid = credentials[email]?.password == password
+        if (isValid) {
+            _loginState.value = true
+        }
+        return isValid
+    }
+
+    fun logout() {
+        _loginState.value = false
     }
 }
